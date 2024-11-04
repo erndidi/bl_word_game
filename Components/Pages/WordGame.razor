@@ -1,0 +1,172 @@
+@page "/wordgame"
+@using CsvHelper
+@using CsvHelper.Configuration
+@using System.Globalization
+@using word_game.Components.Models
+@rendermode InteractiveServer
+@inject IWebHostEnvironment Environment
+
+
+<PageTitle>Home</PageTitle>
+
+<h1>Word Bang! </h1>
+
+<div className='wordWrapper'>
+
+  <select @onchange="SelectWordLength">Select the number of letters the word has
+  <option value={0}>Select word length</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8 >8</option>
+                <option value=9 >9</option>
+                <option value=10 >10</option>
+                <option value=11 >11</option>
+                <option value=12 >12</option>
+                <option value=13 >13</option>
+                <option value=14 >14</option>
+                <option value=15 >15</option>
+            </select>
+         
+</div>
+<br/>
+
+<div class="wordWrapper">
+        <ul class="letter_box">
+            @foreach(var w in wordChar)
+            {
+                <li>@w</li>
+    
+            }
+        </ul>
+    </div>
+
+
+
+<ul>
+    @foreach(var d in defs)
+    {
+        <li data-key=@d.Wordid>@d.Text</li>
+    }
+</ul>
+
+
+@code {
+    private int wordLength = 0;
+    private List<Word> words = new List<Word>();
+    private Word word = new Word();
+    private List<char> wordChar = new List<char>();
+    private string error = string.Empty;
+    private List<Definition> defs = new List<Definition>(); 
+
+    private void SelectWordLength(ChangeEventArgs e)
+    {
+        try{
+             Console.WriteLine("Select word length.");
+             if (int.TryParse(e.Value?.ToString(), out int selectedValue))
+        {
+            wordLength = selectedValue;
+        }
+        ProcessWord();
+        SplitWordLetters();
+        ScrambleHints();
+        
+
+        }catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+       
+    }
+
+     protected override void OnInitialized()
+    {
+        LoadFile();
+    }
+
+    private void LoadFile()
+    {
+        try
+        {
+            Console.WriteLine("Load file.");
+            string filePath = Path.Combine(Environment.WebRootPath, "word_list.csv");
+            FileStream fs = new FileStream(filePath, FileMode.Open);
+
+             using (var reader = new StreamReader(fs))
+            using (var csv = new CsvReader(reader, new CsvConfiguration()))
+            {
+                words = csv.GetRecords<Word>().ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            error = $"Error reading file: {ex.Message}";
+            Console.WriteLine(ex.Message);
+        }
+    }
+    private void ProcessWord()
+    {
+        List<Word> wordLengthList = words.Where(w=>w.length==wordLength).ToList();
+        
+        int rnd = GetRandom(0,wordLengthList.Count());
+        word = wordLengthList[rnd];
+
+    }
+
+    private void GetDefs(List<Word> wordList)
+    {
+        int word_count = wordList.Count()-1; 
+       List<int> usedHints = new List<int>();
+        
+        try{
+              for (int i = 0; i < 5; i++)
+        {
+            int newhint;
+            do
+            {
+                newhint = GetRandom(0, word_count);
+            } while (usedHints.Contains(newhint) || newhint == word.id);
+           
+            usedHints.Add(newhint);
+            
+
+            Word addDef = wordList.FirstOrDefault(w => w.id == newhint);
+
+            if (addDef != null)
+            {
+                defs.Add(new Definition { Id = Guid.NewGuid(), Text = addDef.definition, Wordid = addDef.id });
+                Console.WriteLine(addDef.definition);
+            }
+        }
+        ScrambleHints();
+        }catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+      
+    
+    }
+
+    private int GetRandom(int min, int max )
+    {
+      
+         Random rand = new Random(max-1);
+        return rand.Next(min,max);
+        
+    }
+
+    private void ScrambleHints()
+    {
+       Random rand = new Random();
+       int idx = rand.Next(0,6);
+       Definition def = new Definition{ Id = Guid.NewGuid(), Text=word.text, Wordid = word.id};
+       defs.Insert(idx,def);   
+    }
+
+    private void SplitWordLetters()
+    {
+        wordChar = word.text.ToCharArray().ToList();
+    }
+}    

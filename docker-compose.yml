@@ -1,0 +1,37 @@
+
+
+services:
+  blazorapp:
+    container_name: word_game
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+    depends_on:
+      - db
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=db;Database=game;Username=admin;Password=ketpeck68002024
+      - ASPNETCORE_HTTP_PORTS=80
+    networks:
+      - game-net
+
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=ketpeck68002024
+      - POSTGRES_DB=game
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - game-net
+
+networks:
+  game-net: 
+    name: game-net
+
+volumes:
+  postgres_data:

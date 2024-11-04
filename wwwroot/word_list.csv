@@ -1,0 +1,254 @@
+id,text,definition,length
+1,Apple , A round fruit ,5
+2,Accuse , To charge with wrongdoing ,6
+3,Amazing , Causing great wonder or astonishment ,7
+4,Acoustic , Related to sound or hearing ,8
+5,Affection , A fond or tender feeling ,9
+6,Adventure , An exciting or unusual experience ,10
+7,Apprehension , Anxiety or fear about the future ,12
+8,Announcement , A public or formal notice ,13
+9,Accommodation , A place to stay or live ,14
+10,Authentication , The process of confirming the truth or validity ,15
+11,Banana , A curved fruit ,6
+12,Breathe , To inhale and exhale air ,7
+13,Beautiful , Pleasing to the senses or mind ,9
+14,Beneficial , Producing good results or advantages ,11
+15,Basketball , A sport played with a ball and hoop ,11
+16,Blossom , The flower of a plant ,7
+17,Backpacking , Traveling with a backpack ,11
+18,Bewilderment , A state of confusion or puzzlement ,12
+19,Brontosaurus , A type of extinct dinosaur ,12
+20,Bioluminescence , The emission of light by living organisms ,15
+21,Candle , A wax source of light ,6
+22,Cascade , A small waterfall ,7
+23,Celebrate , To observe with festivities ,8
+24,Charming , Delightfully attractive or pleasing ,8
+25,Cappuccino , A type of coffee ,10
+26,Comprehend , To understand or grasp mentally ,10
+27,Celebration , A joyful event or gathering ,11
+28,Collaboration , Working together on a project ,12
+29,Constellation , A group of stars forming a pattern ,13
+30,Circumference , The distance around a circular object ,13
+31,Dagger , A sharp knife ,6
+32,Delight , A high degree of pleasure or happiness ,6
+33,Discover , To find or learn something new ,8
+34,Distinct , Clearly different or separate ,8
+35,Dramatic , Pertaining to drama or acting ,8
+36,Distraction , A diversion or interruption of attention ,11
+37,Development , The process of growth or progress ,11
+38,Documentation , The act of recording or providing evidence ,13
+39,Demonstration , A public display or exhibition ,13
+40,Differentiation , The process of becoming distinct or specialized ,15
+41,Emerge , To come forth or appear ,6
+42,Embrace , To hug or hold closely ,7
+43,Enormous , Extremely large in size or amount ,8
+44,Education , The process of acquiring knowledge or skills ,10
+45,Encounter , A meeting or unexpected experience ,9
+46,Extravagant , Excessive or lavish ,11
+47,Elaboration , The act of adding details or complexities ,11
+48,Enthusiastically , With great excitement or zeal ,15
+49,Engineering ," The application of scientific principles to design and build structures, devices, or systems",11
+50,Enlightenment , The state of gaining knowledge or wisdom ,13
+51,Falcon , A bird of prey ,6
+52,Fascinate , To attract or captivate ,9
+53,Fantastic , Extraordinary or remarkable ,9
+54,Foundation , The base or support of a structure ,11
+55,Friendship , A close and trusting relationship between friends ,10
+56,Fertilization , The process of combining male and female reproductive cells ,12
+57,Frivolous , Lacking seriousness or importance ,9
+58,Fermentation , The chemical process of breaking down a substance ,12
+59,Facilitation , The act of making a process easier or more efficient ,12
+60,Fabrication , The act of creating or inventing something false ,12
+61,Guitar , A musical instrument ,6
+62,Glorious , Magnificent or splendid ,8
+63,Gratitude , A feeling of thankfulness and appreciation ,9
+64,Grandiose , Impressive and imposing in appearance or style ,9
+65,Generation , A group of individuals born and living during the same period ,10
+66,Geopolitics , The study of the effects of geography on politics ,11
+67,Gravitation , The force of attraction between objects with mass ,11
+68,Gesticulation , The act of making expressive gestures ,13
+69,Generalization , The process of forming general conclusions or principles ,14
+70,Globalization , The process of interconnectedness and interdependence among nations ,13
+71,Hammer , A tool for pounding ,6
+72,Harmony , A pleasing combination of elements ,7
+73,Happiness , A state of wellbeing and contentment ,10
+74,Highlight , To emphasize or draw attention to ,8
+75,Humanity , The human race collectively ,8
+76,Hypothesis , A proposed explanation based on limited evidence ,10
+77,Hesitation , A moment of indecision or uncertainty ,10
+78,Hospitality , Friendly and generous treatment of guests ,12
+79,Horticulture ," The science and art of growing fruits,vegetables",12
+80,Hallucination , A false perception of reality ,13
+81,Igloo , An Inuit shelter ,5
+82,Identity , Self recognition or the characteristics that make an individual unique ,8
+83,Imagination , Creative thinking or the ability to form mental images ,11
+84,Inspiration , A source of motivation or creativity ,12
+85,Inevitable , Certain to happen and impossible to avoid ,10
+86,Intervention , The act of interfering or getting involved in a situation ,12
+87,Illumination , The act of providing light or clarity ,12
+88,Information , Knowledge or facts communicated or received ,11
+89,Implementation , The process of carrying out a plan or idea ,14
+90,Incomprehensible , Impossible to understand or grasp fully ,15
+91,Jaguar , A large cat known for its distinctive spots ,6
+92,Journey , A trip or voyage from one place to another ,7
+93,Joyful , Full of joy or happiness ,7
+94,Juxtapose , To place side by side for comparison or contrast ,10
+95,Justification , A reason or explanation for an action or belief ,13
+96,Judgment , The ability to make decisions or form opinions ,8
+97,Jeopardize , To put at risk or in danger ,10
+98,Journalist , A person who reports news or writes for newspapers or magazines ,10
+99,Jurisdiction , The authority to interpret and apply the law within a certain area ,12
+100,Juxtaposition , The act or placement of two things (usually abstract concepts) near each other ,13
+101,Kangaroo , A marsupial native to Australia ,8
+102,Kingdom , A category in biological classification ,7
+103,Knowledge ," Information, facts, or awareness obtained through experience or education",9
+104,Kindness ," The quality of being friendly,generous,or considerate",8
+105,Kaleidoscope , A tube containing loose pieces of colored glass or plastic that reflect light and create intricate patterns ,12
+106,Kinetoplastid , A type of protozoan that possesses a unique structure called a kinetoplast ,13
+107,Keystone , The central stone at the summit of an arch locking the other stones in place,8
+108,Kleptomania , A mental disorder characterized by an impulse to steal items not needed for personal use or monetary value ,11
+109,Lizard , A reptile typically having a long body and tail ,6
+110,Lemon , A citrus fruit with a sour taste ,5
+111,Laughter , The sound of expressing amusement or joy ,8
+112,Luminous , Emitting or reflecting light; shining brightly ,8
+113,Longevity , The state or quality of having a long life ,9
+114,Labyrinth , A complex maze or intricate network of passages ,9
+115,Leisurely , Relaxed and unhurried in a manner or pace ,9
+116,Lightning , A sudden electrostatic discharge during a thunderstorm ,10
+117,Legalization , The process of making something lawful or valid ,11
+118,Laryngoscopy , A medical procedure to examine the larynx using a laryngoscope ,11
+119,Magnet , An object with a magnetic field ,6
+120,Melody , A sequence of musical notes that form a tune ,6
+121,Mysterious , Difficult to understand or explain; enigmatic ,11
+122,Motivation , The reason or desire that drives a person to take action or achieve a goal ,11
+123,Magnificent ," Impressively beautiful, elaborate, or grand",11
+124,Multifaceted ," Having many aspects,features, or facets",12
+125,Maintenance , The process of preserving or keeping something in good condition ,12
+126,Manipulation , The skillful handling or control of something or someone ,12
+127,Manifestation , The act of becoming visible or evident ,13
+128,Masterpiece ," A work of outstanding artistry, skill, or craftsmanship",10
+129,Night , The period between sunset and sunrise when it is dark ,5
+130,Needle ," A slender, pointed object used for sewing or medical procedures",6
+131,Notorious ," Famous or well known, particularly for negative reasons",9
+132,Navigation , The process of planning and directing the course of a ship or aircraft,11
+133,Necessity , Something that is required or indispensable ,9
+134,Notification , The act of informing or notifying someone about something ,12
+135,Neutrality , The state of not taking sides or not favoring one party in a conflict ,10
+136,Negotiation , The process of reaching an agreement through discussion and compromise ,11
+137,Nourishment , The act of providing food and other substances necessary for growth and health ,11
+138,Nationalization , The process of a government taking control of privately owned industries or assets ,15
+139,Octopus , A marine animal with tentacles and a soft body ,7
+140,Opportunity , A favorable or advantageous circumstance or occasion ,11
+141,Obsession , An excessive and persistent preoccupation or idea ,9
+142,Organization , The act of arranging or structuring something in an orderly manner ,12
+143,Obligation ," A duty, commitment, or responsibility",10
+144,Orientation , The determination of one's position or direction relative to a reference point ,11
+145,Outrageous , Shockingly bad or excessive; offensive ,10
+146,Overwhelming , Overpowering or very intense ,12
+147,Observation , The act of closely watching or monitoring something ,11
+148,Optimization , The process of making something as efficient or effective as possible ,12
+149,Penguin , A flightless bird native to Antarctica ,7
+150,Paradox , A statement or situation that contradicts itself ,7
+151,Phenomenon , A remarkable or observable occurrence or event ,10
+152,Precision , The quality of being exact or accurate ,9
+153,Perception ," The process of recognizing, interpreting, and organizing sensory information",10
+154,Productive , Yielding or producing good results or outcomes ,10
+155,Protection , The act of keeping something or someone safe from harm or danger ,11
+156,Perseverance , The persistence and determination to achieve a goal despite obstacles ,12
+157,Perpendicular ,At an angle of 90 degrees to a given line or surface,13
+158,Psychoanalysis , A psychological therapy that aims to uncover unconscious thoughts and feelings ,14
+159,Quasar , A celestial object that emits extremely powerful radiation ,6
+160,Quiet , Making little or no noise; silent ,5
+161,Quotation ," A passage or statement taken from a book, speech, or text",10
+162,Quality , The standard of excellence or superiority ,7
+163,Quadrilateral , A polygon with four sides and four angles ,12
+164,Questionnaire , A set of questions used to gather information or opinions ,13
+165,Quicksilver , The element mercury in its liquid form ,11
+166,Quotidian , Occurring or experienced on a daily basis; ordinary ,9
+167,Quirkiness , The quality of being unconventional or peculiar ,10
+168,Quantification , The act of measuring or expressing something in numerical terms ,13
+169,Rabbit , A small mammal known for its long ears and hopping gait ,6
+170,Radiant , Emitting or reflecting light; shining brightly ,7
+171,Reciprocity , The practice of exchanging things with others for mutual benefit ,11
+172,Resilience , The ability to recover quickly from difficulties or setbacks ,10
+173,Reflection ," The throwing back of light,sound, or heat by a surface",11
+174,Revolutionary , Involving or causing a dramatic change or upheaval ,13
+175,Replication , The process of copying or duplicating something ,11
+176,Reliability , The quality of being dependable or trustworthy ,11
+177,Repetition , The act of doing or saying something again ,10
+178,Representation , The act of depicting or portraying something visually or symbolically ,15
+179,Snake ,A long legless reptile that slithers,5
+180,Serene ,Calm or peaceful,6
+181,Sunrise , The time when the sun first appears above the horizon in the morning ,7
+182,Symmetry , The quality of being made up of exactly similar parts facing each other or around an axis ,8
+183,Sensation , A physical feeling or perception through the senses ,9
+184,Significance , The quality of being important or meaningful ,12
+185,Synchronization , The act of coordinating events or actions to occur at the same time ,15
+186,Surveillance ," The monitoring and observation of activities, behavior, or information",12
+187,Satisfaction , A sense of contentment or fulfillment ,12
+188,Spontaneity , The quality of being impulsive or occurring naturally without planning ,12
+189,Tiger , A large carnivorous cat with distinctive orange brown stripes ,5
+190,Tornado ," A violent windstorm characterized by a twisting, funnel shaped cloud",7
+191,Tranquil , Calm and peaceful; free from disturbance ,8
+192,Treasure , Valuable or precious possessions ,8
+193,Transformation , A thorough or dramatic change in form or appearance ,14
+194,Transcendence , The state of exceeding or surpassing ordinary limits ,12
+195,Telecommunication , The transmission of information over a distance using electronic means ,15
+196,Tangential , Relating to or along a tangent; diverging from the main subject ,10
+197,Terminology , The specialized vocabulary used in a particular field of study or activity ,11
+198,Transportation , The act or process of conveying people or goods from one place to another ,14
+199,Unicorn , A mythical horse like creature with a single horn on its forehead ,7
+200,Universe ," The entirety of space, time, matter, and energy",8
+201,Ultimate , The highest or most extreme degree ,8
+202,Understanding , The ability to comprehend or grasp the meaning of something ,13
+203,Unprecedented , Never before seen or experienced ,14
+204,Utilization , The act of using or making effective use of something ,11
+205,Unification , The process of becoming united or forming a single entity ,11
+206,Uniformity ," The quality of being consistent or the same in form, nature, or quality",10
+207,Ubiquitous ," Present, appearing, or found everywhere",10
+208,Unanimity , Complete agreement or unity of opinion ,9
+209,Volcano ," A mountain that erupts with lava,ash, and gases",7
+210,Vibrant ," Full of energy, enthusiasm, or vitality",7
+211,Victory , The state of winning or achieving success ,7
+212,Vigorous ," Strong,active, and robust",8
+213,Verification , The process of confirming or validating the accuracy of something ,12
+214,Vegetation , Plant life in a particular region or area ,11
+215,Vulnerability , The state of being susceptible to harm or damage ,13
+216,Visibility , The degree to which something can be seen or noticed ,11
+217,Valedictorian , The student with the highest academic rank in a graduating class ,13
+218,Ventilation , The provision of fresh air or the circulation of air in a space ,12
+219,Wolf , A carnivorous mammal of the dog family ,4
+220,Water ," A transparent, odorless, and tasteless liquid",5
+221,Wonder , A feeling of amazement or admiration ,6
+222,Whimsical , Playfully quaint or fanciful in an amusing way,9
+223,Wildlife , Animals living in a natural environment ,7
+224,Weather , The atmospheric conditions at a particular place and time ,7
+225,Worldwide , Happening or existing all over the world ,9
+226,Wholesome , Conducive to or suggestive of good health and physical well being ,9
+227,Watermelon , A juicy and refreshing fruit with green skin and pink or red flesh ,10
+228,Westminster ," A historic district in London, England known for its government buildings and landmarks",11
+229,Xenon ,A chemical element with the symbol Xe and atomic number 54,5
+230,Xenophobia , A strong dislike or fear of people from other countries ,10
+231,Xylophone , A musical instrument consisting of wooden bars struck with mallets ,9
+232,Xerophyte , A plant adapted to live in dry conditions ,9
+233,Xenogenesis , The production of offspring that are entirely different from the parents ,12
+234,Yak , Large shaggy haired bovine found in the Himalayan region ,3
+235,Yoga ," A physical, mental, and spiritual practice originating in India",4
+236,Yacht , A recreational boat or ship ,5
+237,Yearn , To have a strong desire or longing for something ,5
+238,Yesterday , The day before today ,9
+239,Yearbook , A publication featuring photographs and information about a school's students and events ,8
+240,Yellow , A color resembling the sun's rays ,6
+241,Yearning ," A deep, often melancholy longing",8
+242,Youthful , Having the characteristics of youth; young in appearance or spirit ,8
+243,Yielding , Tending to give in or surrender to pressure or influence ,8
+244,Zebra , A large animal that resembles a horse with black and white stripes,6
+245,Zenith , The highest point or peak ,6
+246,Zephyr ," A gentle, mild breeze",6
+247,Zero , The numerical symbol for the absence of quantity; nothing ,4
+248,Zucchini , A type of summer squash ,8
+249,Zestful , Full of enthusiasm or energy ,7
+250,Zeppelin , A type of rigid airship ,8
+251,Zoologist , A scientist who studies animals and their behavior ,9
+252,Zirconium ,A chemical element with the symbol Zr and atomic number 40,9
+253,Ziggurat , A rectangular stepped tower with a temple on top built by ancient Mesopotamian civilizations,8

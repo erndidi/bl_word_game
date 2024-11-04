@@ -1,0 +1,65 @@
+.wordWrapper[b-r5adwta0xu] {
+    display: flex;
+    margin-top: 100px;
+    flex-flow: column;
+    height: 100%;
+}
+
+
+.instruction[b-r5adwta0xu] {
+    display: flex;
+    margin-bottom: 100px;
+    height: 35%;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+}
+
+.letter_box[b-r5adwta0xu] {
+    display: inline;
+    align-items: center;
+    padding-left: 50px;
+    margin: 70px, 70px,70px,70px;
+    margin-bottom: 100px;
+}
+
+.definitions[b-r5adwta0xu] {
+    margin-bottom: 50px;
+}
+
+
+.text_display[b-r5adwta0xu] {
+    color:black;
+}
+
+.text_nodisplay[b-r5adwta0xu] {
+    color:transparent;
+}
+
+.letter_input[b-r5adwta0xu] {
+    max-width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    background-color: pink;
+}
+
+.letter_hidden[b-r5adwta0xu] {
+    color: transparent;
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 20px;
+}
+
+.letter_visible[b-r5adwta0xu] {
+    color: black;
+}
+
+.gameButtonBox[b-r5adwta0xu] {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hintList[b-r5adwta0xu]{
+    text-align: left;
+}

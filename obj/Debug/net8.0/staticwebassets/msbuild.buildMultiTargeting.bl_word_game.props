@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/bl_word_game.props" />
+</Project>

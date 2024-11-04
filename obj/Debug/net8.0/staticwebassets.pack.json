@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/ernestlipford/Project/blazor/game/bl_word_game/Components/Pages/Home.razor.js",
+      "PackagePath": "staticwebassets/Components/Pages/Home.razor.js"
+    },
+    {
+      "Id": "/Users/ernestlipford/Project/blazor/game/bl_word_game/obj/Debug/net8.0/scopedcss/projectbundle/bl_word_game.bundle.scp.css",
+      "PackagePath": "staticwebassets/bl_word_game.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/ernestlipford/Project/blazor/game/bl_word_game/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/Users/ernestlipford/Project/blazor/game/bl_word_game/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/ernestlipford/Project/blazor/game/bl_word_game/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/ernestlipford/Project/blazor/game/bl_word_game/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "/Users/ernestlipford/Project/blazor/game/bl_word_game/wwwroot/word_list.csv",
+      "PackagePath": "staticwebassets/word_list.csv"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.bl_word_game.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.bl_word_game.props",
+      "PackagePath": "build\\bl_word_game.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.bl_word_game.props",
+      "PackagePath": "buildMultiTargeting\\bl_word_game.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.bl_word_game.props",
+      "PackagePath": "buildTransitive\\bl_word_game.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

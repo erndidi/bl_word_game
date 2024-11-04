@@ -1,0 +1,72 @@
+.wordWrapper[b-kkaqhy2eub] {
+    display: flex;
+    margin-top: 100px;
+    flex-flow: column;
+    height: 100%;
+}
+
+
+.instruction[b-kkaqhy2eub] {
+    display: flex;
+    margin-bottom: 100px;
+    height: 35%;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+}
+
+.letter_box[b-kkaqhy2eub] {
+    display: inline;
+    align-items: center;
+    padding-left: 50px;
+    margin: 70px, 70px,70px,70px;
+    margin-bottom: 100px;
+}
+
+.definitions[b-kkaqhy2eub] {
+    margin-bottom: 50px;
+}
+
+
+.text_display[b-kkaqhy2eub] {
+    color:black;
+}
+
+.text_nodisplay[b-kkaqhy2eub] {
+    color:transparent;
+}
+
+.letter_input[b-kkaqhy2eub] {
+    max-width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    background-color: pink;
+}
+
+.letter_hidden[b-kkaqhy2eub] {
+    color: transparent;
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 20px;
+}
+
+.letter_visible[b-kkaqhy2eub] {
+    color: black;
+}
+
+.gameButtonBox[b-kkaqhy2eub] {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hintList[b-kkaqhy2eub]{
+    text-align: left;
+}
+
+.hintListContainer[b-kkaqhy2eub]{
+    color: black;
+    font-size:large;
+    font-family: 'Bangers', cursive;   
+   
+}
