@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("bl_word_game")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fefe2ff2acb9fceef403cb3790477ef7e651c4c")]
 [assembly: System.Reflection.AssemblyProductAttribute("bl_word_game")]
 [assembly: System.Reflection.AssemblyTitleAttribute("bl_word_game")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

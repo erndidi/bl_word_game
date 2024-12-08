@@ -23,21 +23,42 @@
     margin-bottom: 100px;
 }
 
+.buttonBox {
+    display: inline;
+    align-items: center;
+    margin: 100px, 100px,100px,100px;
+    margin-bottom: 100px;
+}
+
+.hint {
+    opacity: 1;
+    transition: opacity 0.5s ease-out, height 0.5s ease-out, margin 0.5s ease-out;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.hint_remove {
+    opacity: 0;
+    height: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
 .definitions {
     margin-bottom: 50px;
 }
 
 
-.text_display {
-    color:black;
+.text_display:read-only {
+    color: black;
 }
 
-.text_nodisplay {
+.text_no_display {
     color:transparent;
 }
 
 .letter_input {
-    max-width: 40px;
+    width: 40px;
     height: 40px;
     margin-right: 20px;
     background-color: pink;
@@ -53,11 +74,20 @@
 .letter_visible {
     color: black;
 }
+.gameButton {
+    width: 120px;  /* Increased width for better visibility */
+    height: 40px;  /* Increased height for better visibility */
+    font-size: 14px;  /* Added font size for better readability */
+    margin: 5px;  /* Added margin for spacing */
+    color:black
+}
 
 .gameButtonBox {
     display: flex;
     align-items: center;
     gap: 20px;
+    max-width: max-content;
+    margin-top: 20px;  /* Added top margin for spacing */
 }
 
 .hintList{
@@ -70,3 +100,4 @@
     font-family: 'Bangers', cursive;   
    
 }
+

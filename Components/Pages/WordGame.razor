@@ -6,82 +6,161 @@
 @rendermode InteractiveServer
 @inject IWebHostEnvironment Environment
 
-
 <PageTitle>Home</PageTitle>
 
 <h1>Word Bang! </h1>
 
-<div className='wordWrapper'>
-
-  <select @onchange="SelectWordLength">Select the number of letters the word has
-  <option value={0}>Select word length</option>
-                <option value=3>3</option>
-                <option value=4>4</option>
-                <option value=5>5</option>
-                <option value=6>6</option>
-                <option value=7>7</option>
-                <option value=8 >8</option>
-                <option value=9 >9</option>
-                <option value=10 >10</option>
-                <option value=11 >11</option>
-                <option value=12 >12</option>
-                <option value=13 >13</option>
-                <option value=14 >14</option>
-                <option value=15 >15</option>
-            </select>
-         
+<div class='wordWrapper'>
+    <select @onchange="SelectWordLength">
+        <option value="0">Select word length</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+    </select>
 </div>
+<div>
+    <p>@word.text</p>
+</div>
+
 <br/>
 
 <div class="wordWrapper">
-        <ul class="letter_box">
-            @foreach(var w in wordChar)
-            {
-                <li>@w</li>
-    
-            }
-        </ul>
+    <div class="letter_box">
+        @for (int i = 0; i < letterOfRec.Count(); i++)
+        {
+            int idx = i;
+            char val = letterOfRec[i].Letter;
+            <input 
+                @onkeydown="(e) => HandleKeyDown(e, idx)" 
+                data-pick="@GetPickValue(idx)"
+                data-idx="@i"
+                type="text" 
+                class="@letterOfRec[i].ClassName"
+                value="@val"
+                readonly />
+        }
     </div>
-
-
+</div>
 
 <ul>
-    @foreach(var d in defs)
+    @foreach (var h in hints)
     {
-        <li data-key=@d.Wordid>@d.Text</li>
+        <li class="@h.ClassName" data-key="@h.Id">@h.Text</li>
     }
 </ul>
 
+<div class="gameButtonBox">
+    <button @onclick="TakeHint" class="gameButton" >Give me hint</button><button @onclick=ShowLetter class="gameButton" value=>Give me word</button>
+</div>
 
 @code {
-    private int wordLength = 0;
-    private List<Word> words = new List<Word>();
-    private Word word = new Word();
-    private List<char> wordChar = new List<char>();
-    private string error = string.Empty;
-    private List<Definition> defs = new List<Definition>(); 
+    public int wordLength = 5;
+    public List<Word> words = new List<Word>();
+    public List<Hint> hints = new List<Hint>();
+    public Word word = new Word();
+    public List<Guess> letterOfRec = new List<Guess>();
+    public string error = string.Empty;
+    private Random rand = new Random();
+    
+    // New list to track correct guesses
+    private List<int> correctGuesses = new List<int>();
 
     private void SelectWordLength(ChangeEventArgs e)
     {
-        try{
-             Console.WriteLine("Select word length.");
-             if (int.TryParse(e.Value?.ToString(), out int selectedValue))
+        try
         {
-            wordLength = selectedValue;
-        }
-        ProcessWord();
-        SplitWordLetters();
-        ScrambleHints();
-        
+            hints.Clear();
+            letterOfRec.Clear();
+            correctGuesses.Clear();
+            StateHasChanged();
+            if (int.TryParse(e.Value?.ToString(), out int selectedValue))
+            {
+                wordLength = selectedValue;
+            }
 
-        }catch(Exception ex)
+            ProcessWord();
+            SplitWord();
+            GetHintList();
+            ScrambleHints();
+            
+
+        }
+        catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
         }
-       
     }
 
-     protected override void OnInitialized()
+    private void HandleKeyDown(KeyboardEventArgs e, int dataKey)
+    {
+        if (e.Key.Length == 1 && char.ToLowerInvariant(e.Key[0]) == char.ToLowerInvariant(letterOfRec[dataKey].Letter)&&!letterOfRec[dataKey].Guessed)
+        {
+            letterOfRec[dataKey].ClassName = "text_display";
+            letterOfRec[dataKey].Guessed = true;
+            StateHasChanged(); 
+        } // Trigger UI update
+        
+        Console.WriteLine($"Key pressed: {e.Key}, data-key: {dataKey}");
+    }
+
+    private async void TakeHint()
+    {
+        int remove = GetRandomExclude(0,hints.Count-1,word.id);
+        
+       
+          Hint hintToRemove = hints[remove];
+            hintToRemove.ClassName += " hint_remove";
+            Console.WriteLine($"Hints-{hints[remove].Id} classname is {hints[remove].ClassName}");
+
+            // Wait for transition duration
+          //  await Task.Delay(500);
+
+            // Remove the hint after transition
+           // hints.RemoveAt(remove);
+            StateHasChanged();
+
+    }
+
+     private void ShowLetter()
+    {
+
+    }
+
+    private bool CheckForWin()
+    {
+        bool hasWon = true;
+        foreach(var l in letterOfRec)
+        {
+            if(!l.Guessed)
+            {
+                hasWon=false;
+                break;
+            }
+        }
+        return hasWon; 
+    }
+
+    private string GetPickValue(int index)
+    {
+        return correctGuesses.Contains(index) ? "1" : "0";
+    }
+
+    private void ClearLists()
+    {
+        hints.Clear();
+    }
+
+    protected override void OnInitialized()
     {
         LoadFile();
     }
@@ -94,7 +173,7 @@
             string filePath = Path.Combine(Environment.WebRootPath, "word_list.csv");
             FileStream fs = new FileStream(filePath, FileMode.Open);
 
-             using (var reader = new StreamReader(fs))
+            using (var reader = new StreamReader(fs))
             using (var csv = new CsvReader(reader, new CsvConfiguration()))
             {
                 words = csv.GetRecords<Word>().ToList();
@@ -106,67 +185,92 @@
             Console.WriteLine(ex.Message);
         }
     }
+
     private void ProcessWord()
     {
-        List<Word> wordLengthList = words.Where(w=>w.length==wordLength).ToList();
-        
-        int rnd = GetRandom(0,wordLengthList.Count());
+        List<Word> wordLengthList = words.Where(w => w.length == wordLength).ToList();
+
+        int rnd = GetRandom(0, wordLengthList.Count());
         word = wordLengthList[rnd];
-
-    }
-
-    private void GetDefs(List<Word> wordList)
-    {
-        int word_count = wordList.Count()-1; 
-       List<int> usedHints = new List<int>();
         
-        try{
-              for (int i = 0; i < 5; i++)
-        {
-            int newhint;
-            do
-            {
-                newhint = GetRandom(0, word_count);
-            } while (usedHints.Contains(newhint) || newhint == word.id);
-           
-            usedHints.Add(newhint);
-            
+         // Reset correct guesses for a new word
+       
+     }
 
-            Word addDef = wordList.FirstOrDefault(w => w.id == newhint);
-
-            if (addDef != null)
+     private void SplitWord()
+     {
+         string wordTrim = word.text.Trim();
+         List<char> workChar = wordTrim.ToList();
+            for(int i=0;i<workChar.Count();i++)
             {
-                defs.Add(new Definition { Id = Guid.NewGuid(), Text = addDef.definition, Wordid = addDef.id });
-                Console.WriteLine(addDef.definition);
+                letterOfRec.Add(new Guess{ Idx=i, ClassName="text_no_display",Letter=workChar[i],Guessed=false});
             }
-        }
-        ScrambleHints();
-        }catch(Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
-      
-    
-    }
+     }
 
-    private int GetRandom(int min, int max )
-    {
-      
-         Random rand = new Random(max-1);
-        return rand.Next(min,max);
-        
-    }
+     private void GetHintList()
+     {
+         int word_count = words.Count() - 1;
+         List<int> usedHints = new List<int>();
 
-    private void ScrambleHints()
-    {
-       Random rand = new Random();
-       int idx = rand.Next(0,6);
-       Definition def = new Definition{ Id = Guid.NewGuid(), Text=word.text, Wordid = word.id};
-       defs.Insert(idx,def);   
-    }
+         try
+         {
+             for (int i = 0; i < 5; i++)
+             {
+                 int newhint;
+                 bool foundDef = false;
+                 while (!foundDef)
+                 {
+                     newhint = GetRandom(0, word_count);
+                     if (!usedHints.Contains(newhint) && newhint != word.id)
+                     {
+                         usedHints.Add(newhint);
+                         foundDef = true;
+                     }
+                 }
+             }
 
-    private void SplitWordLetters()
-    {
-        wordChar = word.text.ToCharArray().ToList();
-    }
-}    
+             foreach (var i in usedHints)
+             {
+                 Word addWord = words.Where(w => w.id == i).FirstOrDefault();
+                 hints.Add(new Hint{ Id=addWord.id,Text=addWord.definition,ClassName = "hint"});
+             }
+         }
+         catch (Exception ex)
+         {
+             Console.WriteLine(ex.Message);
+         }
+     }
+
+     private int GetRandom(int min, int max)
+     {
+         return rand.Next(min, max);
+     }
+
+    private int GetRandomExclude(int min, int max,int exclude)
+     {
+        int rtn = exclude;
+        do {
+             rtn=GetRandom(min,max);
+             if(rtn!=exclude)
+             break;
+        }while (rtn==exclude);
+        return rtn;
+     }
+
+     private void ScrambleHints()
+     {
+         if (hints.Count > 0)
+         {
+             int hintCount = hints.Count() - 1;
+             Random rand = new Random();
+             int idx = rand.Next(0, hintCount);
+             Hint realWord = new Hint{ Id=word.id, Text=word.definition,ClassName="hint"};
+
+             hints.Insert(idx, realWord);
+         }
+         else
+         {
+             Console.WriteLine("defs count is " + hints.Count());
+         }
+     }
+}

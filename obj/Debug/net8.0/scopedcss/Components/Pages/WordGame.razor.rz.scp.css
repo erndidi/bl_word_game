@@ -23,21 +23,42 @@
     margin-bottom: 100px;
 }
 
+.buttonBox[b-kkaqhy2eub] {
+    display: inline;
+    align-items: center;
+    margin: 100px, 100px,100px,100px;
+    margin-bottom: 100px;
+}
+
+.hint[b-kkaqhy2eub] {
+    opacity: 1;
+    transition: opacity 0.5s ease-out, height 0.5s ease-out, margin 0.5s ease-out;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.hint_remove[b-kkaqhy2eub] {
+    opacity: 0;
+    height: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
 .definitions[b-kkaqhy2eub] {
     margin-bottom: 50px;
 }
 
 
-.text_display[b-kkaqhy2eub] {
-    color:black;
+.text_display:read-only[b-kkaqhy2eub] {
+    color: black;
 }
 
-.text_nodisplay[b-kkaqhy2eub] {
+.text_no_display[b-kkaqhy2eub] {
     color:transparent;
 }
 
 .letter_input[b-kkaqhy2eub] {
-    max-width: 40px;
+    width: 40px;
     height: 40px;
     margin-right: 20px;
     background-color: pink;
@@ -53,11 +74,20 @@
 .letter_visible[b-kkaqhy2eub] {
     color: black;
 }
+.gameButton[b-kkaqhy2eub] {
+    width: 120px;  /* Increased width for better visibility */
+    height: 40px;  /* Increased height for better visibility */
+    font-size: 14px;  /* Added font size for better readability */
+    margin: 5px;  /* Added margin for spacing */
+    color:black
+}
 
 .gameButtonBox[b-kkaqhy2eub] {
     display: flex;
     align-items: center;
     gap: 20px;
+    max-width: max-content;
+    margin-top: 20px;  /* Added top margin for spacing */
 }
 
 .hintList[b-kkaqhy2eub]{
@@ -70,3 +100,4 @@
     font-family: 'Bangers', cursive;   
    
 }
+
